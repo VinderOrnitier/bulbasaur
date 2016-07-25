@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Pockemon;
+  src: url(../fonts/Pokemon-Solid.ttf) format("truetype"); }
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  background: linear-gradient(315deg, #BDFFB6 0, #F5FEF9 50%); }
+
+#status {
+  /* avoid an excessively wide status text */
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 400px; }
+
+h1 {
+  font-family: "Pockemon", Tahoma, sans-serif;
+  margin-top: 0;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 1px #375eaa;
+  color: #feca04;
+  text-shadow: -3px 3px 0 #1c2b5e, -1px -1px 0 #1c2b5e, 1px -1px 0 #1c2b5e, -1px 1px 0 #1c2b5e, 1px 1px 0 #1c2b5e; }
+
+.msg-box {
+  position: relative;
+  background: linear-gradient(315deg, #4ab583 0, #266378 50%);
+  color: #fff;
+  min-height: 200px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 10px; }
+  .msg-box:after {
+    top: 100%;
+    right: 65px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #409e80;
+    border-width: 20px;
+    margin-right: 0px; }
+
+.btn-p {
+  position: relative;
+  display: inline-block;
+  color: #1d8696;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 1px #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
+  .btn-p.dark {
+    background: #1c8796;
+    color: #abefab;
+    box-shadow: 0px 0px 3px 1px #245d6c; }
+    .btn-p.dark:after {
+      border-color: #abefab; }
+  .btn-p:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #1d8696;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+  .btn-p:hover:after {
+    width: 45px;
+    height: 45px;
+    border-width: 2px; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  footer .img-wrapper {
+    width: 120px; }
+    footer .img-wrapper img {
+      width: 100%;
+      transform: scaleX(-1); }
+
+/*# sourceMappingURL=main.css.map */
