@@ -1,21 +1,9 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
+
 <html>
 <head>
     <title>Bulbasaur</title>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
     <link rel="stylesheet" href="css/main.css">
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <script src="js/popup.js"></script>
     <script src="js/common.js"></script>
 </head>
@@ -24,7 +12,7 @@
     <div class="msg-box">
         <div id="status"></div>
         <img id="image-result" hidden>
-        <a href="#" class="btn-p dark">Go</a>
+        <button id="open-button" class="btn-p dark open-button">Go</button>
     </div>
     <footer>
         <div class="footer-control">
@@ -35,6 +23,15 @@
             <img src="img/bulbasaur.png" alt="pet">
         </div>
     </footer>
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-guts">
+            <h1>Get ready!</h1>
+            <p>Let's find some pokemons at this page.</p>
+            <button class="btn-p close-button" id="close-button">No</button>
+        </div>
+    </div>
 </body>
 </html>
 
